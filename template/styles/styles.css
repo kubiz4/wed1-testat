@@ -14,6 +14,25 @@ body {
 	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
 }
 
+header {
+	background: #0060a0;
+	color: #fff;
+	height: 5rem;
+	padding: 0.6rem;
+	font-family: sans-serif;
+	font-size: 1.7rem;
+	margin-bottom: 2.4rem;
+}
+
+header > a {
+	text-decoration: none;
+}
+
+header svg,
+header h1 {
+	vertical-align: top;
+	display: inline-block;
+}
 
 
 /* images */
@@ -25,9 +44,55 @@ body {
 
 
 /* lists */
+nav ul {
+	list-style-type: none;
+}
 
+nav ul {
+	list-style-type: none;
+}
 
+nav > ul {
+	margin: 0.6rem;
+	padding: 0.6rem;
+	border: 1px solid #bfbfbf;
+	background-color: #f2f2f2;
+}
 
+nav > ul > li > ul {
+	margin-left: 1rem;
+}
+
+nav > ul a {
+	color: #000;
+}
+
+nav a[href] {
+	color: #0645ad;
+	text-decoration: underline;
+}
+
+nav a[hreflang]:before {
+	display: inline-block;
+	content: " ";
+	vertical-align: middle;
+	height: 1rem;
+	width: 1.5rem;
+	background-size: 1.3rem auto;
+	background-repeat: no-repeat;
+}
+
+nav [hreflang=it]:before {
+	background-image: url('../media/flag-it.svg');
+}
+
+nav [hreflang=fr]:before {
+	background-image: url('../media/flag-fr.svg');
+}
+
+nav [hreflang=en]:before {
+	background-image: url('../media/flag-en.svg');
+}
 /* table */
 
 
