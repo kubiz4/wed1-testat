@@ -119,7 +119,10 @@ button:active {
 
 
 /* images */
-
+object {
+	width: 100%;
+	height: calc(100% * 0.7);
+}
 
 /* calculator */
 .calculator {
@@ -127,14 +130,19 @@ button:active {
 	border-radius: 10px;
 	border: 0;
 
-	width: calc(100% * 0.6);
-	height: calc(100vw * 0.7 * 0.6 / 7*8);
+	width: calc(100% * 0.5);
+	height: calc(100vw * 0.7 * 0.6 / 7*6);
 }
 
 /* video */
 iframe {
 	width: 100%;
 	height: calc(100vw * 0.7 / 16*9);
+}
+
+video {
+	width: 100%;
+	height: calc(100vw * 0.7 / 4*3);
 }
 
 /* lists */
@@ -278,7 +286,7 @@ tr td:first-child {
 body {
 	margin-left: auto;
 	margin-right: auto;
-	width: 1000px;
+	width: 70%;
 }
 
 
