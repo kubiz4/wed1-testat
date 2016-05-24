@@ -335,6 +335,7 @@ input[type=file] {
 input[type=radio],
 input[type=checkbox] {
 	vertical-align: middle;
+}
 
 textarea {
 	resize: vertical;
