@@ -380,9 +380,76 @@
                     </form>
                 </article>
             </section>
-		</main>
+            <section>
+	    <h2>Neuen Autor registrieren</h2>
+		<form>
+		<fieldset>
+			<legend>Autor</legend>
+			<label>
+		                    Herr
+		                    <input type="radio" name="gender" value="female">
+		                </label>
+		                <label>
+		                    Frau
+		                    <input type="radio" name="gender" value="male">
+		                </label>
+		                <label>
+		                    Name
+		                    <input type="text" name="name" required>
+		                </label>
+		                <label>
+		                    E-Mail
+		                    <input type="email" name="mail" required="">
+		                </label>
+		                <label>
+		                    Webseite
+		                    <input type="url" name="website">
+		                </label>
+		                <label>
+		                    Geburtsdatum
+		                    <input type="datetime-local" name="birthday" required>
+		                </label>
+		                <label>
+		                    Nationalität
+		                    <select name="nationality" size="1" required="">
+		                        <option value="" selected="">-- Wählen --</option>
+		                        <option value="CH">Switzerland</option>
+		                        <option value="DE">Deutschland</option>
+		                        <option value="FR">Frankreich</option>
+		                        <option value="IT">Italien</option>
+		                        <option value="AU">Österreich</option>
+		                    </select>
+		                </label>
+		                <label>
+		                    Profiltext
+		                    <textarea name="profile"></textarea>
+		                </label>
+		                <label>
+		                    Profilbilder
+		                    <input type="file" id="fileinput">
+		                </label>
+		            </fieldset>
+		            <fieldset>
+		                <legend>Rechtliches</legend>
+		                <label>
+		                    <input type="checkbox" name="verification" value="textowner"> Ich bestätige, das ich der Urheber des
+		                    Textes bin
+		                </label>
+		                <label>
+		                    <input type="checkbox" name="verification" value="imageowner"> Ich bestätige, das ich der Urheber
+		                    aller eingereichter Bilder bin
+		                </label>
+		                <label>
+		                    <input type="checkbox" name="verification" value="texttruth"> Ich bestätige, das der Text nach
+		                    bestem Treu und glauben der Wahrheit entspricht und die Bilder nicht manipuliert wurden
+		                </label>
+		            </fieldset>
 
-		<!-- TODO -->
+		            <button type="submit">Account anlegen</button>
+		            <button type="reset">Eingaben zurücksetzen</button>
+		        </form>
+		    </section>
+		</main>
         <footer class="main-footer">
             <address>
                 Bahnhofstrasse 42, 8000 Zürich
