@@ -126,10 +126,6 @@ object {
 	height: calc(100% * 0.7);
 }
 
-.left {
-	float: left;
-}
-
 /* calculator */
 .calculator {
 	box-shadow: 0 0 10px #000;
