@@ -305,7 +305,7 @@ label {
 input[type=text],
 input[type=email],
 input[type=url],
-input[type=datetime],
+input[type=datetime-local],
 input[type=search],
 textarea {
 	display: block;
@@ -333,6 +333,8 @@ input[type=file] {
 }
 
 input[type=radio],
+input[type=checkbox] {
+	vertical-align: middle;
 
 textarea {
 	resize: vertical;
