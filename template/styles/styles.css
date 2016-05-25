@@ -29,14 +29,14 @@ article p {
 	margin: 0.6rem 0;
 }
 
-article > h3 {
+article > header >h3 {
 	counter-increment: h3;
 	border-bottom: 1px solid #000;
 	padding: 0;
 	margin: 0.6rem 0;
 }
 
-article > h3:before {
+article > header > h3:before {
 	content: counter(h3) " ";
 }
 
@@ -71,6 +71,24 @@ figcaption a,
 h2 {
 	font-size: 2rem;
 	padding: 0.6rem 0;
+}
+
+section > header,
+article > header {
+	background: #fff;
+	color: #000;
+	font-size: 1rem;
+	height: 0rem;
+	padding: 0rem;
+}
+
+section  > header {
+	margin-bottom: 4rem;
+
+}
+
+article > header {
+	margin-bottom: 2rem;
 }
 
 header {
@@ -261,7 +279,7 @@ tr {
 	line-height: 3em;
 }
 
-tr:nth-child(odd) {
+tr:nth-child(even) {
 	background-color: #dbe6ef;
 }
 
@@ -302,11 +320,7 @@ label {
 	color: #808080;
 }
 
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=datetime-local],
-input[type=search],
+input:not([type=file]):not([type=radio]):not([type=checkbox]):not([type=range]),
 textarea {
 	display: block;
 	width: 100%;
