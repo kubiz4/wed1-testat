@@ -2,42 +2,39 @@
 /**
  * core
  */
+var input = '';
+var output = '';
+var operator = '';
+
 /*sum calc*/
 function sum(a, b) {
-    if (isNaN(a + b)) {
-        return 'Invalid Calculation';
-    }
     return a + b;
 }
 
 /*sub calc*/
 function difference(a, b) {
-    if (isNaN(a - b)) {
-        return 'Invalid Calculation';
-    }
     return a - b;
 }
 
 /*Mult calc*/
 function product(a, b) {
-    if (isNaN(a * b)) {
-        return 'Invalid Calculation';
-    }
     return a * b;
 }
 
 /*div calc*/
 function quotient(a, b) {
-    if (!isFinite(a / b) || (isNaN(a / b))) {
-        return 'Invalid Calculation';
-    }
-    return a / b;
+   return a / b;
 }
 
 /*symbol handling*/
 function calculate(a, b, operation) {
     a = parseFloat(a);
     b = parseFloat(b);
+    if (b == 0) {
+        return 'Invalid Calculation'
+    } else if (isNaN(a) || isNaN(b)) {
+        return 'Invalid Calculation';
+    } else {
     switch (operation) {
         case "+":
             return sum(a, b);
@@ -49,6 +46,7 @@ function calculate(a, b, operation) {
             return quotient(a, b);
         default:
             return 'Invalid Calculation';
+    }
     }
 }
 
@@ -64,23 +62,24 @@ function Welcome() {
 
 window.addEventListener('load', function () {
     document.getElementById('output').innerHTML = 'Welcome';
-    //for calculations
-    var input = '';
-    var output = '';
-    var operator = '';
+
+    //click
     document.addEventListener('click', function (evnt) {
+        //event shortcuts
+        var myEventclass = evnt.target.attributes.getNamedItem('class');
+        var myEventID = evnt.target.attributes.getNamedItem('id');
         /*button*/
-        if (evnt.target.attributes.getNamedItem('class') !== null) {
+        if (myEventclass !== null) {
             Welcome();
 
             /*number button*/
-            if (evnt.target.attributes.getNamedItem('class').nodeValue === 'number') {
+            if (myEventclass.nodeValue === 'number') {
                 input += evnt.target.attributes.getNamedItem('value').nodeValue;
             }
 
             /*operator button*/
-            if (evnt.target.attributes.getNamedItem('class').nodeValue === 'operator') {
-                var operatorid = evnt.target.attributes.getNamedItem('id').nodeValue;
+            if (myEventclass.nodeValue === 'operator') {
+                var operatorid = myEventID.nodeValue;
                 operator = document.getElementById(operatorid).innerHTML;
                 if (output === '') {
                     output = input;
@@ -89,8 +88,8 @@ window.addEventListener('load', function () {
             }
 
             /*command button*/
-            if (evnt.target.attributes.getNamedItem('class').nodeValue === 'command') {
-                var commandid = evnt.target.attributes.getNamedItem('id').nodeValue;
+            if (myEventclass.nodeValue === 'command') {
+                var commandid = myEventID.nodeValue;
                 var command = document.getElementById(commandid).innerHTML;
 
                 /*c button*/
@@ -112,3 +111,4 @@ window.addEventListener('load', function () {
         }
     });
 });
+
