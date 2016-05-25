@@ -35,7 +35,6 @@ function quotient(a, b) {
 }
 
 /*symbol handling*/
-/*TODO put this in UI or Core?*/
 function calculate(a, b, operation) {
     a = parseFloat(a);
     b = parseFloat(b);
